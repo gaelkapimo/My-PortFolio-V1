@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code Gael Kap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #menu-btn.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+    #menu-btn.open span:nth-child(2) {
+      opacity: 0;
+    }
+    #menu-btn.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+    .logo-icon:hover {
+      transform: rotate(10deg) scale(1.1);
+      transition: transform 0.3s ease;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -8px;
+      background-image: url(assets/images/pexels-negativespace-160107.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(2px);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="text-gray-900 font-sans min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-black bg-opacity-90 backdrop-blur-md shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4 md:p-6">
+      <a href="index.html" class="flex items-center space-x-3 select-none">
+        <svg class="w-8 h-8 text-green-500 logo-icon" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 17l-5-5 5-5m8 10l5-5-5-5" />
+        </svg>
+        <span class="text-white text-2xl tracking-wide">
+          <span class="text-green-500">Gael</span> Kap
+        </span>
+      </a>
+      <nav class="hidden md:flex space-x-6 text-white text-sm">
+        <a href="index.html" class="hover:text-green-400 transition">Accueil</a>
+        <a href="formations.html" class="hover:text-green-400 transition">Formations</a>
+        <a href="about.html" class="hover:text-green-400">A propos</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden flex flex-col space-y-1 w-6 h-6 text-white focus:outline-none">
+        <span class="block h-0.5 bg-white"></span>
+        <span class="block h-0.5 bg-white"></span>
+        <span class="block h-0.5 bg-white"></span>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden flex flex-col md:hidden bg-opacity-5 px-6 py-4 space-y-4 text-white text-sm">
+      <a href="index.html" class="hover:text-green-400">Accueil</a>
+      <a href="formations.html" class="hover:text-green-400">Formations</a>
+      <a href="about.html" class="hover:text-green-400">A propos</a>
+
+    </nav>
+  </header>
+
+    <!-- Section Formations -->
+    <section class="py-20 px-6 md:px-12 lg:px-24">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl text-white mb-6 text-center"> Mes<span class="text-green-500"> Formations</span> </h3>
+        <div class="space-y-8">
+          <a href="https://exemple.com/formation-web" target="_blank" class="group block rounded-2xl overflow-hidden transition hover:shadow-xl hover:scale-[1.01]">
+            <div class="flex flex-row items-center gap-2 p-2 md:p-3 bg-black bg-opacity-95">
+              <img src="assets/images/html-5-svgrepo-com.svg" alt="Web" class="w-38 h-28 bg-white md:h-48 object-cover rounded-xl shadow-md transition group-hover:opacity-90">
+              <div class="w-2/3 pl-4">
+                <h3 class="md:text-xl text-white mb-1 text-base">Développement Web</h3>
+                <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
+                <p class="text-white text-xs md:text-sm leading-relaxed">
+                  Apprends HTML, CSS, JavaScript, Tailwind, React, avec des projets concrets et une pédagogie moderne.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="https://exemple.com/formation-python" target="_blank" class="group block rounded-2xl overflow-hidden transition hover:shadow-xl hover:scale-[1.01]">
+            <div class="flex flex-row items-center gap-2 p-2 md:p-3 bg-black bg-opacity-95">
+              <img src="assets/images/python-svgrepo-com.svg" alt="Python IA" class="w-38 h-28 bg-white md:h-48 object-cover rounded-xl shadow-md">
+              <div class="w-2/3 pl-4">
+                <h3 class="md:text-xl text-white mb-1 text-base">Python & Intelligence Artificielle</h3>
+                <div class="text-yellow-400 text-sm mb-1">★★★★☆</div>
+                <p class="text-white text-xs md:text-sm leading-relaxed">
+                  Scripts, bots, IA et automatisation : maîtrise l'univers Python en profondeur.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="https://exemple.com/formation-cpp" target="_blank" class="group block rounded-2xl overflow-hidden transition hover:shadow-xl hover:scale-[1.01]">
+            <div class="flex flex-row items-center gap-2 p-2 md:p-3 bg-black bg-opacity-95">
+              <img src="assets/images/c-plus-plus-svgrepo-com.svg" alt="C++" class="w-38 h-28 bg-white md:h-48 object-cover rounded-xl shadow-md">
+              <div class="w-2/3 pl-4">
+                <h3 class="md:text-xl text-white mb-1 text-base">Programmation C++</h3>
+                <div class="text-yellow-400 text-sm mb-1">★★★★☆</div>
+                <p class="text-white text-xs md:text-sm leading-relaxed">
+                  Apprends à maîtriser les bases et la logique avancée du langage C++ à travers des exercices pratiques.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="https://exemple.com/formation-csharp" target="_blank" class="group block rounded-2xl overflow-hidden transition hover:shadow-xl hover:scale-[1.01]">
+            <div class="flex flex-row items-center gap-2 p-2 md:p-3 bg-black bg-opacity-95">
+              <img src="assets/images/csharp-svgrepo-com.svg" alt="C#" class="w-38 h-28 bg-white md:h-48 object-cover rounded-xl shadow-md">
+              <div class="w-2/3 pl-4 ">
+                <h3 class="md:text-xl text-white mb-1 text-base">Développement C# / .NET</h3>
+                <div class="text-yellow-400 text-sm mb-1">★★★☆☆</div>
+                <p class="text-white text-xs md:text-sm leading-relaxed">
+                  Crée des applications robustes avec C# et publie-les dans l'écosystème Windows et .NET.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="https://exemple.com/formation-kotlin" target="_blank" class="group block rounded-2xl overflow-hidden transition hover:shadow-xl hover:scale-[1.01]">
+            <div class="flex flex-row items-center gap-2 p-2 md:p-3 bg-black bg-opacity-95">
+              <img src="assets/images/kotlin-svgrepo-com.svg" alt="Kotlin" class="w-38 h-28 bg-white md:h-48 object-cover rounded-xl shadow-md">
+              <div class="w-2/3 pl-4">
+                <h3 class="md:text-xl text-white mb-1 text-base">Kotlin pour Android</h3>
+                <div class="text-yellow-400 text-sm mb-1">★★★★☆</div>
+                <p class="text-white text-xs md:text-sm leading-relaxed">
+                  Développe des applications Android modernes avec Kotlin, Compose, API REST, Firebase et plus.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-100 text-white py-10 mt-16">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+      <div class="flex items-center gap-4 mb-6 md:mb-0">
+        <img src="assets/images/card-biographie.jpg" alt="Gael Kapimo" class="w-14 h-14 rounded-full object-cover border border-white shadow" />
+        <div>
+          <p class="text-base">Gael Kapimo</p>
+          <p class="text-sm text-gray-400">Développeur Web et Mobile avec 2 ans d'expériences.</p>
+          <a href="#" class="text-green-400 hover:underline">Me contacter</a>
+        </div>
+      </div>
+      <div class="text-sm text-gray-400 text-center md:text-right">
+        <p>Lubumbashi<br />Commune Annexe/Craa, Avenue Mutombo, UK</p>
+        <p class="mt-2"><a href="#" class="text-green-400 hover:underline">Mentions légales</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
